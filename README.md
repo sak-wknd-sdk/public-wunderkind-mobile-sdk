@@ -24,6 +24,9 @@ When a new version of the Wunderkind iOS SDK is released, follow these steps to 
    .binaryTarget(
        name: "Wunderkind",
        url: "https://storage.googleapis.com/wunderkind-ios-sdk/<NEW_VERSION>.zip",
+       checksum: "<NEW_CHECKSUM>"
+   )
+   ```
 
 3. **Create a Git Tag for the SDK Version**
    - After updating and committing your changes, create a tag matching the SDK version:
@@ -32,3 +35,24 @@ When a new version of the Wunderkind iOS SDK is released, follow these steps to 
      git push origin <NEW_VERSION>
      ```
    - This helps others reference the exact SDK version in your repository.
+
+---
+
+## How to Use Wunderkind SDK with Swift Package Manager
+
+1. **Add the Package to Your Project**
+   - In Xcode, go to **File > Add Packages...**
+   - Enter the URL of this repository. 
+      `https://github.com/sak-wknd-sdk/public-wunderkind-mobile-sdk.git`
+   - Select the desired version or branch.
+
+2. **Import Wunderkind in Your Code**
+   ```swift
+   import Wunderkind
+   ```
+
+3. **Start Using the SDK**
+   - Follow the Wunderkind documentation for initialization and usage in your app.
+
+**Note:**  
+Make sure your deployment target is iOS 11 or higher, as specified
